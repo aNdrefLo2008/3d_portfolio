@@ -23,10 +23,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <video width="320" height="240" controls className={`${styles.paddingX} absolute inset-0 lg:top-[350px] top-[480px] lg:w-[1000px] w-[800px] mx-auto flex flex-row items-start`}>
-        <source src={ad} type="video/ogg"/>
-        Your browser does not support the video tag.
-    </video>
+      
       
       <div className='absolute xs:bottom-0 bottom:32 w-full justify-center flex items-center'>
         <a href="#about">
