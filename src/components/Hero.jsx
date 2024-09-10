@@ -25,19 +25,19 @@ const Hero = () => {
         </div>
       </div>
 
-      <motion.div style={{ transformOrigin: 'center', willChange: 'transform' }} className={`relative flex justify-center items-center inset-0 lg:top-[350px] top-[480px] my- lg:w-[700px] w-[500px] mx-auto flex-row`}>
+      <motion.div style={{ transformOrigin: 'center', willChange: 'transform' }} className={`relative sm:flex justify-center items-center inset-0 lg:top-[350px] top-[480px] hidden lg:w-[700px] w-[500px] mx-auto flex-row`}>
         <motion.video autoPlay  // Ensure the video starts playing automatically
         muted  // Optionally mute the video if necessary
         loop
          whileHover={{ scale: 1.05 }}  // Scale the video by 10% on hover
          transition={{ duration: 0.5, ease: "easeInOut" }}  // Animation duration of 0.5 seconds
-        className={`w-full h-full object-cover  my-10 mb-10`}>
+        className={`w-full h-full object-cover sm:my-10 sm:mb-10 m-0`}>
           <source src={ad} type="video/ogg"/>
           Your browser does not support the video tag.
         </motion.video>
       </motion.div>
       
-      <div className='absolute xs:-bottom-20 bottom-32 w-full justify-center flex items-center'>
+      <div className='absolute sm:-bottom-20 bottom-40 w-full justify-center flex items-center'>
         <a href="#about">
           <div className='w-[35px] h-[64px] rounded-3xl flex justify-center items-start p-2 border-4 border-secondary'>
             <motion.div animate={{

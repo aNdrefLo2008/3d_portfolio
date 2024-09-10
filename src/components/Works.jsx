@@ -7,7 +7,7 @@ import { SectionWrapper } from "../hco"
 import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 
-const ProjectCard = ({ index, name, description, tags, image, sourc_code_link }) => (
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
     <Tilt
       options={{
@@ -25,16 +25,20 @@ const ProjectCard = ({ index, name, description, tags, image, sourc_code_link })
         />
 
         <div className="absolute flex justify-end m-3 card-img_hover inset-0">
-          <div
-            onClick={() => window.open(sourc_code_link, "_blank")}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+        <a
+            href={source_code_link} 
+            target="_blank" 
+            rel="noopener noreferrer"
           >
+          <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
             <img
-              src={github}
-              alt="github"
-              className="w-2/3 h-2/3"
-            />
+                src={github}
+                alt="github"
+                className="w-2/3 h-2/3"
+              />
+            
           </div>
+        </a>
         </div>
       </div>
 

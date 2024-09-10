@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import logo1 from "./logo 1.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -36,6 +37,7 @@ import landingPage from './landingPage.png';
 import ecommerce from './E-Commerce.png';
 
 export {
+  logo1,
   ad,
   landingPage,
   ecommerce,
