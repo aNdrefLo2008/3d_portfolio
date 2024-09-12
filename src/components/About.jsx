@@ -41,7 +41,8 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
         variants={fadeIn("", "", 0.1, 1)}
       >
-        I'm a skilled, talented and young web developer with experience in Typescript, HTML5, CSS, Javascript, and respective frameworks, as React, NextJS, Three.js, Tailwind and much more! Me and my associate like to collaborate closely with clients to provide the best service possibile. We mainly work in web development, so if you are interested in creating efficient, scalable and user-friendly web sites for your business, we are here to help you.
+        
+        I'm a 16-year-old passionate about design and technology. I specialize in designing and developing websites, creating motion design videos in After Effects, and bringing products to life with 3D animations in Blender. Fluent in German, English, Italian, and Romanian, I love collaborating with teams and bringing creative ideas to life, whether it's through web development, video production, or product animation. I'm always excited to create and innovate, especially when working with others to build something unique.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

@@ -1,4 +1,5 @@
 import {
+    restaurant,
     nextjs,
     supabase,
     mobile,
@@ -50,11 +51,11 @@ import {
       icon: web,
     },
     {
-      title: "Python Developer",
+      title: "Motion Graphics Designer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Product Animator",
       icon: backend,
     },
     {
@@ -227,26 +228,27 @@ import {
       source_code_link: "https://github.com/aNdrefLo2008/e-commerce",
     },
     {
-      name: "TikTak",
+      name: "Restaurant",
       description:
-        "Web application that enables users to share photos or videos, like and comment them.",
+        "Web application where users can get information about a restaurant, menu, opening hours, what's so special about the place and how it looks.",
       tags: [
         {
-          name: "zustand",
+          name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "sanity",
+          name: "tailwind",
           color: "green-text-gradient",
         },
         {
-          name: "typescript",
+          name: "motion",
           color: "pink-text-gradient",
         },
       ],
-      image: tiktak,
-      source_code_link: "https://github.com/aNdrefLo2008/tiktak",
+      image: restaurant,
+      source_code_link: "https://github.com/aNdrefLo2008/restaurant-example",
     },
+    
     {
       name: "Beatiful Design",
       description:

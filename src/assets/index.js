@@ -23,6 +23,7 @@ import threejs from "./tech/threejs.svg";
 import python from './tech/python.png'
 import supabase from './tech/supabase.png'
 import nextjs from './tech/nextjs.png'
+import restaurant from './restaurant.png'
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -37,6 +38,7 @@ import landingPage from './landingPage.png';
 import ecommerce from './E-Commerce.png';
 
 export {
+  restaurant,
   logo1,
   ad,
   landingPage,
