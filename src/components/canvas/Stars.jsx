@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from 'maath/random/dist/maath-random.esm';
 import Loader from "../Loader";  // Assume you have a loader component
+import { isMobile } from 'react-device-detect';
 
 const Stars = (props) => {
   const ref = useRef();
@@ -41,6 +42,7 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   const [loadError, setLoadError] = useState(false);
+  const isLowPerformance = isMobile && window.deviceMemory && window.deviceMemory < 4;
 
   return (
     <>
@@ -50,7 +52,14 @@ const StarsCanvas = () => {
         </div>
       ) : (
         <div className="w-full h-auto absolute inset-0 z-[-1]">
-          <Canvas camera={{ position: [0, 0, 1] }}>
+          <Canvas shadows={!isLowPerformance}
+          frameloop={isLowPerformance ? 'demand' : 'always'}
+          camera={{ 
+            fov: isLowPerformance ? 60 : 45,  // Wider FOV for older devices
+            near: 0.1,
+            far: 200,
+            position: [0, 0, 1]
+          }}>
             <Suspense fallback={<Loader />}>
               <Stars />
             </Suspense>

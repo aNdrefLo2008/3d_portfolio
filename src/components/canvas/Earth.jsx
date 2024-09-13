@@ -2,6 +2,7 @@ import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import Loader from "../Loader";
+import { isMobile } from 'react-device-detect';
 
 const Earth = () => {
   const { scene } = useGLTF('./planet/scene.gltf', true, (error) => {
@@ -20,6 +21,8 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   const [loadError, setLoadError] = useState(false);
+  const isLowPerformance = isMobile && window.deviceMemory && window.deviceMemory < 4; // Example check for low-memory devices
+
 
   return (
     <>
@@ -29,11 +32,10 @@ const EarthCanvas = () => {
         </div>
       ) : (
         <Canvas
-          shadows
-          frameloop="demand"
-          gl={{ preserveDrawingBuffer: true }}
+          shadows={!isLowPerformance}
+          frameloop={isLowPerformance ? 'demand' : 'always'}
           camera={{ 
-            fov: 45,
+            fov: isLowPerformance ? 60 : 45,  // Wider FOV for older devices
             near: 0.1,
             far: 200,
             position: [-4, 3, 6]
