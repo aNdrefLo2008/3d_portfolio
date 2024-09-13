@@ -18,7 +18,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       className=" bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
     >
       <div className="relative h-[230px]">
-        <img
+        <img loading="lazy" 
           src={image}
           alt={name}
           className="h-full w-full object-cover rounded-2xl"
@@ -31,7 +31,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             rel="noopener noreferrer"
           >
           <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-            <img
+            <img loading="lazy" 
                 src={github}
                 alt="github"
                 className="w-2/3 h-2/3"

@@ -23,7 +23,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <img src={logo1} alt="logo" className='h-16 object-contain'/>
+          <img loading="lazy" src={logo1} alt="logo" className='h-16 object-contain'/>
           <p className='text-white text-[18px] flex font-bold cursor-pointer'>Andrei &nbsp; 
           <span className='sm:block hidden'>| Florea</span>
           </p>
@@ -39,7 +39,7 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-            <img src={toggle ? close : menu} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'
+            <img loading="lazy" src={toggle ? close : menu} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}/>
             <motion.div initial={{ y: 25, opacity: 0 }}
               animate={toggle ? { y: 0, opacity: 1 } : { y: 25, opacity: 0 }}
