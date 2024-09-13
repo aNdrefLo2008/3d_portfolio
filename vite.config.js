@@ -8,15 +8,5 @@ export default defineConfig({
     watch: {
       usePolling: true
     }
-  },
-  build: {
-    rollupOptions: {
-      external: [
-        // Add the problematic module here
-        'next/navigation.js'
-      ],
-    },
-  },
+  }
 })
-
-
