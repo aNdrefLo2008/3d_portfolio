@@ -24,6 +24,8 @@ import python from './tech/python.png'
 import supabase from './tech/supabase.png'
 import nextjs from './tech/nextjs.png'
 import restaurant from './restaurant.png'
+import blender from './Blender.png'
+import ae from './ae logo.png'
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -38,6 +40,8 @@ import landingPage from './landingPage.png';
 import ecommerce from './E-Commerce.png';
 
 export {
+  ae,
+  blender,
   restaurant,
   logo1,
   ad,

@@ -28,6 +28,8 @@ import {
     ecommerce,
     tiktak,
     landingPage,
+    blender,
+    ae,
   } from "../assets";
   
   export const navLinks = [
@@ -66,12 +68,12 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
+      name: "After Effects",
+      icon: ae,
     },
     {
-      name: "CSS 3",
-      icon: css,
+      name: "Blender",
+      icon: blender,
     },
     {
       name: "JavaScript",
@@ -98,8 +100,8 @@ import {
       icon: nodejs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "CSS",
+      icon: css,
     },
     {
       name: "Three JS",
@@ -114,8 +116,8 @@ import {
       icon: figma,
     },
     {
-      name: "supabase",
-      icon: supabase
+      name: "HTML 5",
+      icon: html
     },
     {
       name: "nextjs",
