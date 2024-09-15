@@ -1,20 +1,17 @@
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from 'maath/random/dist/maath-random.esm';
-import Loader from "../Loader";  // Assume you have a loader component
+import Loader from "../Loader";
 import { isMobile } from 'react-device-detect';
 
 const Stars = (props) => {
   const ref = useRef();
+  let sphere = random.inSphere(new Float32Array(1500 * 3), { radius: 1.2 });
 
-  // Generate positions using random.inSphere
-  let sphere = random.inSphere(new Float32Array(1500 * 3), { radius: 1.2 }); // 1500 points * 3 (x, y, z)
-
-  // Validate positions to avoid NaN issues
   for (let i = 0; i < sphere.length; i++) {
     if (isNaN(sphere[i])) {
-      sphere[i] = 0;  // Replace NaN values with 0 or a valid number
+      sphere[i] = 0;
     }
   }
 
@@ -41,25 +38,53 @@ const Stars = (props) => {
 }
 
 const StarsCanvas = () => {
-  const [loadError, setLoadError] = useState(false);
+  const [shouldRenderCanvas, setShouldRenderCanvas] = useState(false);
+  const [timerExpired, setTimerExpired] = useState(false);
   const isLowPerformance = isMobile && window.deviceMemory && window.deviceMemory < 4;
+
+  useEffect(() => {
+    if (isMobile) {
+      const timer = setTimeout(() => {
+        setTimerExpired(true);
+      }, 10000); // 10 seconds
+
+      const handleScroll = () => {
+        const starsCanvas = document.getElementById('starsCanvas');
+        const starsCanvasPosition = starsCanvas?.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (starsCanvasPosition <= windowHeight) {
+          setShouldRenderCanvas(true);
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        clearTimeout(timer);
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+      setShouldRenderCanvas(true);
+    }
+  }, []);
 
   return (
     <>
-      {loadError ? (
-        <div className="error-message">
-          Failed to load Stars model.
+      {!shouldRenderCanvas && timerExpired ? (
+        <div className="w-full h-auto absolute inset-0 z-[-1]" id="starsCanvas">
+          <div>😞 The canvas didn't load. Scroll to load it.</div>
         </div>
       ) : (
-        <div className="w-full h-auto absolute inset-0 z-[-1]">
+        <div className="w-full h-auto absolute inset-0 z-[-1]" id="starsCanvas">
           <Canvas shadows={!isLowPerformance}
-          frameloop={isLowPerformance ? 'demand' : 'always'}
-          camera={{ 
-            fov: isLowPerformance ? 60 : 45,  // Wider FOV for older devices
-            near: 0.1,
-            far: 200,
-            position: [0, 0, 1]
-          }}>
+            frameloop={isLowPerformance ? 'demand' : 'always'}
+            camera={{
+              fov: isLowPerformance ? 60 : 45,
+              near: 0.1,
+              far: 200,
+              position: [0, 0, 1]
+            }}>
             <Suspense fallback={<Loader />}>
               <Stars />
             </Suspense>
