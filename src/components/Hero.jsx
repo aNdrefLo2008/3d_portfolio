@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useTranslation(); // Initialize translation hook
 
   return (
-    <section className='relative w-full sm:mt-0 -mt-24 h-screen mx-auto flex justify-center items-center flex-col gap-6'>
+    <section className='relative w-full sm:mt-0 -mt-0 xxs:-mt-24 h-screen mx-auto flex justify-center items-center flex-col gap-6'>
       <div className={`${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#ffffff]'/>
