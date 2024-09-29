@@ -97,6 +97,13 @@ const Navbar = () => {
                   }}>
                   <a href="#contact">{t('navbar.contact')}</a>
                 </li>
+                <li className={`${active === 'ae' ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer hover:text-white text-[16px]`}
+                  onClick={() => {
+                    setActive('ae');
+                    setToggle(!toggle);
+                  }}>
+                  <a href="/aeprojects">{t('navbar.ae')}</a>
+                </li>
               </ul>
             </motion.div>
           </div>
