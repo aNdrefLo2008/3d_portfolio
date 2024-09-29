@@ -8,6 +8,7 @@ const resources = {
           about: "About",
           work: "Work",
           contact: "Contact",
+          ae: "After Effects",
         },
         hero: {
             greeting: "Hi, I'm",
@@ -61,6 +62,7 @@ const resources = {
           about: "Über mich",
           work: "Arbeit",
           contact: "Kontakt",
+          ae: "After Effects",
         },
         hero: {
             greeting: "Hallo, ich bin",

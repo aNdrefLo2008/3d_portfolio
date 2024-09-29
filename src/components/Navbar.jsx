@@ -32,7 +32,7 @@ const Navbar = () => {
         >
           <img loading="lazy" src={logo1} alt="logo" className='h-16 object-contain'/>
           <p className='text-white text-[18px] flex font-bold cursor-pointer'>
-            Andrei &nbsp; <span className='sm:block hidden'>| Florea</span>
+            Andrei &nbsp; <span className='md:block hidden'>| Florea</span>
           </p>
         </Link>
 
@@ -48,6 +48,10 @@ const Navbar = () => {
           <li className={`${active === 'contact' ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive('contact')}>
             <a href="#contact">{t('navbar.contact')}</a>
+          </li>
+          <li className={`${active === 'about' ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
+            onClick={() => setActive('about')}>
+            <a href="/aeprojects">{t('navbar.ae')}</a>
           </li>
         </ul>
 

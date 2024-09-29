@@ -39,7 +39,12 @@ import tiktak from './Tiktak.png';
 import landingPage from './landingPage.png';
 import ecommerce from './E-Commerce.png';
 
+import LogosAnm from './First Logos Animations.mp4'
+import GoogleLgAnm from './Google Logos Animation.mp4'
+
 export {
+  LogosAnm,
+  GoogleLgAnm,
   ae,
   blender,
   restaurant,
