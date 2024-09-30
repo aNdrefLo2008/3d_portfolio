@@ -42,7 +42,12 @@ import ecommerce from './E-Commerce.png';
 import LogosAnm from './First Logos Animations.mp4'
 import GoogleLgAnm from './Google Logos Animation.mp4'
 
+import googlePNG from "./googleAnm.png"
+import logosPNG from "./LogosAnm.png"
+
 export {
+  googlePNG,
+  logosPNG,
   LogosAnm,
   GoogleLgAnm,
   ae,
