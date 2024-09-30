@@ -4,6 +4,33 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     en: {
       translation: {
+        aeProject: {
+          title: "After Effects Animations",
+          gmail: {
+            title: "Gmail",
+            description: "Description of Project 1"
+          },
+          googleMeet: {
+            title: "Google Meet",
+            description: "Description of Project 1"
+          },
+          googleDrive: {
+            title: "Google Drive",
+            description: "Description of Project 2"
+          },
+          afgMedia: {
+            title: "AFG Media",
+            description: "Description of Project 1"
+          },
+          applePodcast: {
+            title: "Apple Podcast",
+            description: "Description of Project 1"
+          },
+          appleTV: {
+            title: "Apple TV",
+            description: "Description of Project 2"
+          }
+        },
         navbar: {
           about: "About",
           work: "Work",
@@ -58,6 +85,33 @@ const resources = {
     },
     de: {
       translation: {
+        aeProject: {
+          title: "After Effects Animationen",
+          gmail: {
+            title: "Gmail",
+            description: "Beschreibung des Projekts 1"
+          },
+          googleMeet: {
+            title: "Google Meet",
+            description: "Beschreibung des Projekts 1"
+          },
+          googleDrive: {
+            title: "Google Drive",
+            description: "Beschreibung des Projekts 2"
+          },
+          afgMedia: {
+            title: "AFG Media",
+            description: "Beschreibung des Projekts 1"
+          },
+          applePodcast: {
+            title: "Apple Podcast",
+            description: "Beschreibung des Projekts 1"
+          },
+          appleTV: {
+            title: "Apple TV",
+            description: "Beschreibung des Projekts 2"
+          }
+        },
         navbar: {
           about: "Über mich",
           work: "Arbeit",

@@ -39,15 +39,15 @@ const Navbar = () => {
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           <li className={`${active === 'about' ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive('about')}>
-            <a href="#about">{t('navbar.about')}</a>
+            <a href="/#about">{t('navbar.about')}</a>
           </li>
           <li className={`${active === 'work' ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive('work')}>
-            <a href="#work">{t('navbar.work')}</a>
+            <a href="/#work">{t('navbar.work')}</a>
           </li>
           <li className={`${active === 'contact' ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive('contact')}>
-            <a href="#contact">{t('navbar.contact')}</a>
+            <a href="/#contact">{t('navbar.contact')}</a>
           </li>
           <li className={`${active === 'about' ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive('about')}>
@@ -81,21 +81,21 @@ const Navbar = () => {
                     setActive('about');
                     setToggle(!toggle);
                   }}>
-                  <a href="#about">{t('navbar.about')}</a>
+                  <a href="/#about">{t('navbar.about')}</a>
                 </li>
                 <li className={`${active === 'work' ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer hover:text-white text-[16px]`}
                   onClick={() => {
                     setActive('work');
                     setToggle(!toggle);
                   }}>
-                  <a href="#work">{t('navbar.work')}</a>
+                  <a href="/#work">{t('navbar.work')}</a>
                 </li>
                 <li className={`${active === 'contact' ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer hover:text-white text-[16px]`}
                   onClick={() => {
                     setActive('contact');
                     setToggle(!toggle);
                   }}>
-                  <a href="#contact">{t('navbar.contact')}</a>
+                  <a href="/#contact">{t('navbar.contact')}</a>
                 </li>
                 <li className={`${active === 'ae' ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer hover:text-white text-[16px]`}
                   onClick={() => {
