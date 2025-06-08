@@ -9,8 +9,10 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import AeProject from './AeProjects';
 import BlProjects from './BlProjects';
+import DataAnalysisProject from './DataAnalysisProject'
 
 export {
+  DataAnalysisProject,
   BlProjects,
   AeProject,
   Hero,

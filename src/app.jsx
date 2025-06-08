@@ -1,28 +1,25 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Import your existing components
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, AeProject } from './components';
-
+// Import components (ensure DataAnalysisProject is added to your components folder)
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, AeProject, DataAnalysisProject } from './components';
 import { Analytics } from '@vercel/analytics/react';
 
 const LandingPage = () => {
   return (
     <div>
-      <div className='relative z-0 bg-primary'>
-        <div className=''>
-          <Analytics />
-          <Navbar />
-          <Hero />
-        </div>
+      <div className="relative z-0 bg-primary">
+        <Analytics />
+        <Navbar />
+        <Hero />
         <About />
         {/* <Experience /> */}
-        <div className='hidden sm:block'>
+        <div className="hidden sm:block">
           <Tech />
         </div>
         <Works />
         {/* <Feedbacks /> */}
-        <div className='relative z-0'>
+        <div className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
@@ -40,14 +37,21 @@ const AeProjects = () => {
   );
 };
 
+const DataAnalysisProjects = () => {
+  return (
+    <div>
+      <Navbar />
+      <DataAnalysisProject />
+    </div>
+  );
+};
+
 const App = () => {
   return (
     <Routes>
-      {/* Route for the landing page */}
       <Route path="/" element={<LandingPage />} />
-
-      {/* Route for the projects page */}
       <Route path="/aeprojects" element={<AeProjects />} />
+      <Route path="/dataanalysisproject" element={<DataAnalysisProjects />} />
     </Routes>
   );
 };

@@ -4,6 +4,36 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     en: {
       translation: {
+        marketcap: {
+          title: "Market Cap Modeling – S&P 500",
+          description1: "This project explores what financial factors drive company valuations by modeling the ",
+          description2: "market capitalization of S&P 500 firms",
+          description3: " using Python, Excel, and SQL. The final model explains ",
+          description4: "over 81% of the variation in market cap, offering actionable insights for analysts and investors.",
+          toolsTitle: "Tools & Technologies",
+          tools: {
+            python: "Python (Pandas, Statsmodels, Seaborn, Matplotlib)",
+            excel: "Excel for EDA and pivot tables",
+            sql: "SQL for structured data querying",
+            jupyter: "Jupyter Notebook for documentation",
+            react: "Tailwind CSS + React for presentation"
+          },
+          modelTitle: "Model Highlights",
+          model: {
+            r2: "R² = 0.812 with robust standard errors (HC3)",
+            variables: "Key variables: EBITDA, Price/Sales, Earnings/Share",
+            vif: "Multicollinearity tested with VIFs (all < 1.05)",
+            diagnostics: "Diagnostic plots: residuals, Q-Q, influence"
+          },
+          chartsTitle: "Diagnostic Charts",
+          skillsTitle: "Skills Demonstrated",
+          skills: {
+            cleaning: "Data cleaning and preprocessing across tools",
+            modeling: "Statistical modeling using OLS and robust errors",
+            visual: "Visual storytelling with Python libraries",
+            communication: "Communication of results through code and charts"
+          }
+        },
         aeProject: {
           title: "After Effects Animations",
           gmail: {
@@ -36,6 +66,7 @@ const resources = {
           work: "Work",
           contact: "Contact",
           ae: "After Effects",
+          dataanalysis: "Data Analysis"
         },
         hero: {
             greeting: "Hi, I'm",
@@ -81,10 +112,41 @@ const resources = {
             description: "Landing page designed in Figma and created in React to showcase the potential of Tailwind CSS."
             }
         }
+
       },
     },
     de: {
       translation: {
+        marketcap: {
+          title: "Marktkapitalisierungsmodellierung – S&P 500",
+          description1: "Dieses Projekt untersucht, welche finanziellen Faktoren die Unternehmensbewertungen beeinflussen, indem es die ",
+          description2: "Marktkapitalisierung von S&P 500 Unternehmen",
+          description3: " mit Python, Excel und SQL modelliert. Das endgültige Modell erklärt ",
+          description4: "über 81 % der Variation in der Marktkapitalisierung und bietet umsetzbare Erkenntnisse für Analysten und Investoren.",
+          toolsTitle: "Werkzeuge & Technologien",
+          tools: {
+            python: "Python (Pandas, Statsmodels, Seaborn, Matplotlib)",
+            excel: "Excel für EDA und Pivot-Tabellen",
+            sql: "SQL für strukturierte Datenabfragen",
+            jupyter: "Jupyter Notebook für Dokumentation",
+            react: "Tailwind CSS + React für Präsentation"
+          },
+          modelTitle: "Modell-Highlights",
+          model: {
+            r2: "R² = 0,812 mit robusten Standardfehlern (HC3)",
+            variables: "Schlüsselvariablen: EBITDA, Preis/Umsatz, Gewinn/Aktie",
+            vif: "Multikollinearität mit VIFs getestet (alle < 1,05)",
+            diagnostics: "Diagnose-Diagramme: Residuen, Q-Q, Einfluss"
+          },
+          chartsTitle: "Diagnose-Diagramme",
+          skillsTitle: "Demonstrierte Fähigkeiten",
+          skills: {
+            cleaning: "Datenbereinigung und -vorverarbeitung über Tools hinweg",
+            modeling: "Statistische Modellierung mit OLS und robusten Fehlern",
+            visual: "Visuelles Storytelling mit Python-Bibliotheken",
+            communication: "Kommunikation der Ergebnisse durch Code und Diagramme"
+          }
+        },
         aeProject: {
           title: "After Effects Animationen",
           gmail: {
@@ -117,6 +179,7 @@ const resources = {
           work: "Arbeit",
           contact: "Kontakt",
           ae: "After Effects",
+          dataanalysis: "Data Analyse"
         },
         hero: {
             greeting: "Hallo, ich bin",
@@ -162,6 +225,7 @@ const resources = {
             description: "Landing Page, die in Figma entworfen und in React erstellt wurde, um das Potenzial von Tailwind CSS zu demonstrieren."
             }
         }
+        
       },
     },
   };

@@ -1,6 +1,6 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next"; // Import the translation hook
+import { useTranslation } from "react-i18next";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hco";
@@ -8,7 +8,7 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
-  const { t } = useTranslation(); // Initialize translation hook
+  const { t } = useTranslation();
 
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>

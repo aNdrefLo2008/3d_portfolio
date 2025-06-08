@@ -32,7 +32,6 @@ function AeProject() {
         </div>
         <motion.div style={{ transformOrigin: 'center', willChange: 'transform' }}>
           <LazyLoadVideo srcMp4={GoogleLgAnm} srcOgg={GoogleLgAnm} fallbackImage={googlePNG} className={`w-full h-full object-cover sm:my-10 sm:mb-10 my-5 rounded-3xl`} />
-
         </motion.div>
       </div>
       <div>

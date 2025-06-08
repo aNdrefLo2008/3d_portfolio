@@ -11,11 +11,11 @@ function LazyLoadVideo({ srcMp4, srcOgg, className, fallbackImage }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect(); // Once loaded, stop observing
+          observer.disconnect();
         }
       },
       {
-        rootMargin: '200px', // Start loading 200px before video comes into view
+        rootMargin: '200px', 
       }
     );
 
