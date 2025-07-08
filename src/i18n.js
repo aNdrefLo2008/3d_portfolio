@@ -70,7 +70,7 @@ const resources = {
         },
         hero: {
             greeting: "Hi, I'm",
-            description: "I design and develop websites, create motion design videos in After Effects, and product animations with Blender.",
+            description: "I design and develop websites, create motion design videos, and do Machine Learning with Python.",
             startWorking: "Start working with me",
             getInTouch: "Get in touch"
         },
@@ -183,7 +183,7 @@ const resources = {
         },
         hero: {
             greeting: "Hallo, ich bin",
-            description: "Ich entwerfe und entwickle Websites, erstelle Motion-Design-Videos in After Effects und Produktanimationen mit Blender.",
+            description: "Ich entwerfe und entwickle Websites, erstelle Motion-Design-Videos in After Effects und Machine Learning mit Python.",
             startWorking: "Beginnen Sie mit mir zu arbeiten",
             getInTouch: "Kontakt aufnehmen"
         },
