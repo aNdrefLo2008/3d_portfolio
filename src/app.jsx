@@ -7,10 +7,8 @@ import Hero   from './components/Hero';
 
 const About               = lazy(() => import('./components/About'));
 const Experience          = lazy(() => import('./components/Experience'));
-const Tech                = lazy(() => import('./components/Tech'));
 const Works               = lazy(() => import('./components/Works'));
 const Contact             = lazy(() => import('./components/Contact'));
-const StarsCanvas         = lazy(() => import('./components/canvas/Stars'));
 const AeProject           = lazy(() => import('./components/AeProjects'));
 const DataAnalysisProject = lazy(() => import('./components/DataAnalysisProject'));
 
@@ -27,9 +25,6 @@ const LandingPage = () => (
     <Hero />
     <Suspense fallback={<SectionFallback />}><About /></Suspense>
     <Suspense fallback={<SectionFallback />}><Experience /></Suspense>
-    <Suspense fallback={<SectionFallback />}>
-      <div className="hidden sm:block"><Tech /></div>
-    </Suspense>
     <Suspense fallback={<SectionFallback />}><Works /></Suspense>
     <div className="relative z-0">
       <Suspense fallback={<SectionFallback />}><Contact /></Suspense>

@@ -47,7 +47,7 @@ export { default as imgMarketCap }       from './projects/market-cap.png';
 export { default as imgJobDashboard }    from './projects/job-dashboard.png';
 export { default as imgFerienwohnungen } from './projects/ferienwohnung-gera.png';
 export { default as imgAfgMedia }        from './projects/AFG.png';
-export { default as imgPortfolio }        from './projects/e-commerce.png';
+export { default as imgPortfolio }        from './projects/E-commerce.png';
 
 // ── Experience Logo ──
 export { default as fraunhofer } from "./company/fraunhofer.png";
