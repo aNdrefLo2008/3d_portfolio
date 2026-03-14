@@ -23,7 +23,6 @@ import threejs from "./tech/threejs.svg";
 import python from './tech/python.png'
 import supabase from './tech/supabase.png'
 import nextjs from './tech/nextjs.png'
-import restaurant from './restaurant.png'
 import blender from './Blender.png'
 import ae from './ae logo.png'
 
@@ -32,18 +31,34 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import tiktak from './Tiktak.png';
-import landingPage from './landingPage.png';
-import ecommerce from './E-Commerce.png';
+import tiktak from './projects/tiktak.png';
+import landingPage from './projects/landingpage.png';
+import ecommerce from './projects/e-commerce.png';
+import restaurant from './projects/restaurant.png';
 
 import LogosAnm from './First Logos Animations.mp4'
 import GoogleLgAnm from './Google Logos Animation.mp4'
 
 import googlePNG from "./googleAnm.png"
 import logosPNG from "./LogosAnm.png"
+
+// ── Neue Tech-Icons (Dateien in src/assets/tech/ ablegen) ──
+export { default as golang }      from "./tech/golang.png";
+export { default as docker }      from "./tech/docker.png";
+export { default as postgresql }  from "./tech/postgresql.svg.png";
+export { default as tensorflow }  from "./tech/tensorflow.svg.png";
+export { default as d3js }        from "./tech/d3js.png";
+
+// ── Projekt-Bilder (Dateien in src/assets/projects/ ablegen) ──
+export { default as imgMarketCap }       from './projects/market-cap.png';
+export { default as imgJobDashboard }    from './projects/job-dashboard.png';
+export { default as imgFerienwohnungen } from './projects/ferienwohnung-gera.png';
+export { default as imgAfgMedia }        from './projects/AFG.png';
+export { default as imgPortfolio }        from './projects/e-commerce.png';
+
+// ── Experience Logo ──
+export { default as fraunhofer } from "./company/fraunhofer.png";
+export { default as school } from "./company/gesamtschule-eifel.jpg";
 
 export {
   googlePNG,
@@ -83,8 +98,5 @@ export {
   meta,
   shopify,
   starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  tesla
 };

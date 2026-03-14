@@ -1,214 +1,146 @@
 import {
-    restaurant,
-    nextjs,
-    supabase,
-    mobile,
-    backend,
-    creator,
-    web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
-    python,
-    ecommerce,
-    tiktak,
-    landingPage,
-    blender,
-    ae,
-  } from "../assets";
-  
-  export const navLinks = [
-    {
-      id: "about",
-      title: "About",
-    },
-    {
-      id: "work",
-      title: "Work",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-    },
-  ];
-  
-  const services = [
-    {
-      title: "Web Developer",
-      icon: web,
-    },
-    {
-      title: "Motion Graphics Designer",
-      icon: mobile,
-    },
-    {
-      title: "Product Animator",
-      icon: backend,
-    },
-    {
-      title: "Machine Learning Engineer",
-      icon: creator,
-    },
-  ];
-  
-  const technologies = [
-    {
-      name: "After Effects",
-      icon: ae,
-    },
-    {
-      name: "Blender",
-      icon: blender,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Python",
-      icon: python,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "CSS",
-      icon: css,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "HTML 5",
-      icon: html
-    },
-    {
-      name: "nextjs",
-      icon: nextjs
-    }
-  ];
-  
-  const experiences = [
-    {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-  ];
-  
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
-  
-  const projects = [
-    {
+  mobile,
+  backend,
+  creator,
+  web,
+  javascript,
+  typescript,
+  html,
+  css,
+  reactjs,
+  tailwind,
+  nodejs,
+  git,
+  figma,
+  threejs,
+  python,
+  blender,
+  ae,
+  nextjs,
+  // Neue Tech-Icons (siehe Asset-Anleitung unten)
+  golang,
+  docker,
+  postgresql,
+  tensorflow,
+  d3js,
+  // Projekt-Bilder (siehe Asset-Anleitung unten)
+  imgMarketCap,
+  imgJobDashboard,
+  imgFerienwohnungen,
+  imgAfgMedia,
+  imgPortfolio,
+  // Experience Icons
+  fraunhofer,
+  ecommerce,
+  restaurant,
+  school,
+} from "../assets";
+
+export const navLinks = [
+  { id: "about",   title: "About"   },
+  { id: "experience",    title: "Experience"},
+  { id: "projects",    title: "Projects"    },
+  { id: "contact", title: "Contact" },
+];
+
+/* ── Services / Skill Cards ─────────────────────────────── */
+const services = [
+  { title: "Full-Stack Developer",        icon: web     },
+  { title: "Machine Learning Engineer",   icon: creator },
+  { title: "Cloud & DevOps",              icon: backend },
+  { title: "Frontend & UX Design",        icon: mobile  },
+];
+
+/* ── Tech Stack ─────────────────────────────────────────── */
+const technologies = [
+  { name: "JavaScript",  icon: javascript },
+  { name: "TypeScript",  icon: typescript  },
+  { name: "React JS",    icon: reactjs     },
+  { name: "Next.js",     icon: nextjs      },
+  { name: "Python",      icon: python      },
+  { name: "Golang",      icon: golang      },
+  { name: "TensorFlow",  icon: tensorflow  },
+  { name: "Node JS",     icon: nodejs      },
+  { name: "PostgreSQL",  icon: postgresql  },
+  { name: "Docker",      icon: docker      },
+  { name: "D3.js",       icon: d3js        },
+  { name: "Tailwind CSS",icon: tailwind    },
+  { name: "Three JS",    icon: threejs     },
+  { name: "After Effects",icon: ae         },
+  { name: "Git",         icon: git         },
+  { name: "Figma",       icon: figma       },
+];
+
+/* ── Work Experience ────────────────────────────────────── */
+const experiences = [
+  {
+    title:        "Praktikum – Data Driven Foresight",
+    company_name: "Fraunhofer INT",
+    icon:         fraunhofer,
+    iconBg:       "#ffffff",
+    date:         "2025",
+    points: [
+      "Frontend-Entwicklung (JavaScript, D3.js) am KI-Assistenzsystem KATI (Knowledge Analytics for Technology & Innovation).",
+      "Entwicklung interaktiver Visualisierungen und Analyse-Tools für Daten aus wissenschaftlichen Publikationen und Patenten.",
+      "Unterstützung bei Technologiefrühaufklärung und Innovationsprozessen im Bereich Data Driven Foresight.",
+    ],
+  },
+  {
+    title:        "Abitur – Gymnasiale Oberstufe",
+    company_name: "Gesamtschule Eifel, Nettersheim",
+    icon:         school,
+    iconBg:       "#ffffff",
+    date:         "2024 – 2027",
+    points: [
+      "Leistungskurse: Mathematik & Biologie – vertieftes Arbeiten auf erhöhtem Anforderungsniveau.",
+      "Aktueller Notenschnitt: 1,0 – Englisch (15 Punkte), Geschichte (15 Punkte), Philosophie (15 Punkte).",
+      "Intensives Selbststudium in Informatik: Webentwicklung, Backend-Architekturen und Machine Learning.",
+    ],
+  },
+];
+/* ── Projects ───────────────────────────────────────────── */
+const projects = [
+  {
+    name: "MarketCapModeling",
+    tags: [
+      { name: "python",      color: "blue-text-gradient"  },
+      { name: "tensorflow",  color: "green-text-gradient" },
+      { name: "react",       color: "pink-text-gradient"  },
+    ],
+    image: imgMarketCap,
+    source_code_link: "https://andreiflorea.vercel.app/dataanalysisproject",
+  },
+  {
+    name: "JobDashboard",
+    tags: [
+      { name: "golang",      color: "blue-text-gradient"  },
+      { name: "postgresql",  color: "green-text-gradient" },
+      { name: "docker",      color: "pink-text-gradient"  },
+    ],
+    image: imgJobDashboard,
+    source_code_link: "https://github.com/aNdrefLo2008",
+  },
+  {
+    name: "FerienwohnungenGera",
+    tags: [
+      { name: "nextjs",      color: "blue-text-gradient"  },
+      { name: "tailwind",    color: "green-text-gradient" },
+      { name: "sanity-cms",  color: "pink-text-gradient"  },
+    ],
+    image: imgFerienwohnungen,
+    source_code_link: "https://github.com/aNdrefLo2008",
+  },
+  {
+    name: "AfgMedia",
+    tags: [
+      { name: "nextjs",      color: "blue-text-gradient"  },
+      { name: "tailwind",    color: "green-text-gradient" },
+      { name: "motion",      color: "pink-text-gradient"  },
+    ],
+    image: imgAfgMedia,
+    source_code_link: "https://afgmedia.eu",
+  },
+  {
       name: "E-commerce",
       description:
         "Web application where users can buy phones, tablets or laptops, using stripe to ensure safe payments, and graphql for the connection with the server.",
@@ -250,28 +182,25 @@ import {
       image: restaurant,
       source_code_link: "https://github.com/aNdrefLo2008/restaurant-example",
     },
-    
-    {
-      name: "Beatiful Design",
-      description:
-        "Landing page designed in figma and created in react, created to showcase the potential of tailwindcss.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "figma",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwindcss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: landingPage,
-      source_code_link: "https://github.com/aNdrefLo2008/beatiful-design",
-    },
-  ];
-  
+];
+
+const testimonials = [
+  {
+    testimonial:
+      "Andrei demonstrated a strong technical understanding and impressive commitment during his internship. His contributions to the KATI frontend were well-structured and immediately usable in our research workflows.",
+    name: "Dr. Marcus John",
+    designation: "Researcher",
+    company: "Fraunhofer INT",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    testimonial:
+      "Andrei delivered our vacation rental website with great attention to detail and professionalism. The result exceeded our expectations — clean design, fast loading, and easy to manage.",
+    name: "Oliver Mehrle",
+    designation: "Client",
+    company: "Ferienwohnungen Gera",
+    image: "https://randomuser.me/api/portraits/men/44.jpg",
+  },
+];
+
 export { services, technologies, experiences, testimonials, projects };

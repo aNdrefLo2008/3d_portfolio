@@ -23,8 +23,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         <div className="relative h-[230px]">
           <img
             loading="lazy"
+            decoding="async"
             src={image}
-            alt={t(`projects.${name}.name`)} // Use translated project name
+            alt={t(`projects.${name}.name`)}
+            width={360}
+            height={230}
             className="h-full w-full object-cover rounded-2xl"
           />
 
@@ -89,4 +92,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "projects");
