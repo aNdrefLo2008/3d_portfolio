@@ -26,7 +26,7 @@ import python     from "./tech/python.png";
 import supabase   from "./tech/supabase.png";
 import nextjs     from "./tech/nextjs.png";
 
-import ecommerce  from "./projects/E-commerce.png";
+import ecommerce  from "./projects/ecommerce.png";
 import restaurant from "./projects/restaurant.png";
 
 import LogosAnm   from "./First Logos Animations.mp4";
@@ -46,7 +46,7 @@ export { default as imgMarketCap }       from "./projects/market-cap.png";
 export { default as imgJobDashboard }    from "./projects/job-dashboard.png";
 export { default as imgFerienwohnungen } from "./projects/ferienwohnung-gera.png";
 export { default as imgAfgMedia }        from "./projects/AFG.png";
-export { default as imgPortfolio }       from "./projects/E-commerce.png";
+export { default as imgPortfolio }       from "./projects/ecommerce.png";
 
 // ── Company Logos ───────────────────────────────────────
 export { default as fraunhofer } from "./company/fraunhofer.png";
