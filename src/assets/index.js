@@ -26,12 +26,6 @@ import nextjs from './tech/nextjs.png'
 import blender from './Blender.png'
 import ae from './ae logo.png'
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
-import tiktak from './projects/tiktak.png';
 import landingPage from './projects/landingpage.png';
 import ecommerce from './projects/e-commerce.png';
 import restaurant from './projects/restaurant.png';
