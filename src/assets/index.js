@@ -26,7 +26,7 @@ import nextjs from './tech/nextjs.png'
 import blender from './Blender.png'
 import ae from './ae logo.png'
 
-import ecommerce from './projects/e-commerce.png';
+import ecommerce from './projects/E-commerce.png';
 import restaurant from './projects/restaurant.png';
 
 import LogosAnm from './First Logos Animations.mp4'
