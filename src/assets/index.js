@@ -26,7 +26,6 @@ import nextjs from './tech/nextjs.png'
 import blender from './Blender.png'
 import ae from './ae logo.png'
 
-import landingPage from './projects/landingpage.png';
 import ecommerce from './projects/e-commerce.png';
 import restaurant from './projects/restaurant.png';
 
@@ -64,7 +63,6 @@ export {
   restaurant,
   logo1,
   ad,
-  landingPage,
   ecommerce,
   nextjs,
   supabase,
