@@ -66,7 +66,6 @@ export {
   ad,
   landingPage,
   ecommerce,
-  tiktak,
   nextjs,
   supabase,
   python,
@@ -89,8 +88,4 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla
 };
