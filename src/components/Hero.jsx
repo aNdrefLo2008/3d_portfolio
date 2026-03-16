@@ -98,15 +98,15 @@ const Hero = () => {
         </h1>
 
         {/* Cycling role */}
-        <div className="h-[44px] sm:h-[52px] flex items-center mb-6 overflow-hidden">
-          <AnimatePresence mode="wait">
+        <div className="relative h-[44px] sm:h-[52px] flex items-center mb-6 overflow-hidden">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.p
               key={roleIndex}
-              className="text-[20px] sm:text-[28px] font-semibold text-white/90"
-              initial={{ opacity: 0, y: 20 }}
+              className="absolute text-[20px] sm:text-[28px] font-semibold text-white/90"
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
             >
               {ROLES[roleIndex]}
             </motion.p>
