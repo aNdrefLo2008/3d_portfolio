@@ -10,8 +10,12 @@ import Contact from './Contact';
 import AeProject from './AeProjects';
 import BlProjects from './BlProjects';
 import DataAnalysisProject from './DataAnalysisProject'
+import Services from './Services';
+import Feedbacks from './Feedbacks';
 
 export {
+  Feedbacks,
+  Services,
   DataAnalysisProject,
   BlProjects,
   AeProject,

@@ -28,11 +28,11 @@ import {
   imgJobDashboard,
   imgFerienwohnungen,
   imgAfgMedia,
-  imgPortfolio,
-  // Experience Icons
   fraunhofer,
   ecommerce,
-  restaurant,
+  imgRestaurant,
+  imgElektriker,
+  imgPhysotherapy,
   school,
 } from "../assets";
 
@@ -45,10 +45,10 @@ export const navLinks = [
 
 /* ── Services / Skill Cards ─────────────────────────────── */
 const services = [
-  { title: "Full-Stack Developer",        icon: web     },
-  { title: "Machine Learning Engineer",   icon: creator },
-  { title: "Cloud & DevOps",              icon: backend },
-  { title: "Frontend & UX Design",        icon: mobile  },
+  { title: "Website für lokale Betriebe", icon: web     },   // ← NEU, zuerst
+  { title: "Full-Stack Development",      icon: backend },
+  { title: "Machine Learning",            icon: creator },
+  { title: "UI / UX Design",              icon: mobile  },
 ];
 
 /* ── Tech Stack ─────────────────────────────────────────── */
@@ -101,26 +101,6 @@ const experiences = [
 /* ── Projects ───────────────────────────────────────────── */
 const projects = [
   {
-    name: "MarketCapModeling",
-    tags: [
-      { name: "python",      color: "blue-text-gradient"  },
-      { name: "tensorflow",  color: "green-text-gradient" },
-      { name: "react",       color: "pink-text-gradient"  },
-    ],
-    image: imgMarketCap,
-    source_code_link: "https://andreiflorea.vercel.app/dataanalysisproject",
-  },
-  {
-    name: "JobDashboard",
-    tags: [
-      { name: "golang",      color: "blue-text-gradient"  },
-      { name: "postgresql",  color: "green-text-gradient" },
-      { name: "docker",      color: "pink-text-gradient"  },
-    ],
-    image: imgJobDashboard,
-    source_code_link: "https://github.com/aNdrefLo2008",
-  },
-  {
     name: "FerienwohnungenGera",
     tags: [
       { name: "nextjs",      color: "blue-text-gradient"  },
@@ -131,6 +111,66 @@ const projects = [
     source_code_link: "https://github.com/aNdrefLo2008",
   },
   {
+      name: "Restaurant",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "motion",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: imgRestaurant,
+      source_code_link: "https://v0-restaurant-website-design-sable-two.vercel.app/",
+  },
+
+  {
+      name: "Electrician",
+      tags: [
+        {
+          name: "v0",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "nextjs",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwindcss",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: imgElektriker,
+      source_code_link: "https://v0-muller-elektrotechnik-website-4l17fdeio.vercel.app/",
+  },
+
+  {
+      name: "Physiotherapy",
+      tags: [
+        {
+          name: "reactjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "v0",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwindcss",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: imgPhysotherapy,
+      source_code_link: "https://v0-physiotherapy-website-design-nine.vercel.app/",
+  },
+
+  {
     name: "AfgMedia",
     tags: [
       { name: "nextjs",      color: "blue-text-gradient"  },
@@ -139,6 +179,16 @@ const projects = [
     ],
     image: imgAfgMedia,
     source_code_link: "https://afgmedia.eu",
+  },
+  {
+    name: "JobDashboard",
+    tags: [
+      { name: "golang",      color: "blue-text-gradient"  },
+      { name: "postgresql",  color: "green-text-gradient" },
+      { name: "docker",      color: "pink-text-gradient"  },
+    ],
+    image: imgJobDashboard,
+    source_code_link: "https://github.com/aNdrefLo2008",
   },
   {
       name: "E-commerce",
@@ -160,46 +210,27 @@ const projects = [
       ],
       image: ecommerce,
       source_code_link: "https://github.com/aNdrefLo2008/e-commerce",
-    },
-    {
-      name: "Restaurant",
-      description:
-        "Web application where users can get information about a restaurant, menu, opening hours, what's so special about the place and how it looks.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "green-text-gradient",
-        },
-        {
-          name: "motion",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: restaurant,
-      source_code_link: "https://github.com/aNdrefLo2008/restaurant-example",
-    },
+    }
 ];
 
 const testimonials = [
   {
-    testimonial:
-      "Andrei demonstrated a strong technical understanding and impressive commitment during his internship. His contributions to the KATI frontend were well-structured and immediately usable in our research workflows.",
+    testimonial: "Andrei hat uns mit seiner schnellen Auffassungsgabe und seinem Engagement beeindruckt. Er hat eigenständig an der Frontend-Entwicklung von KATI gearbeitet und dabei stets qualitativ hochwertige Ergebnisse geliefert.",
     name: "Dr. Marcus John",
     designation: "Researcher",
     company: "Fraunhofer INT",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: null,
+    initials: "MJ",
+    color: "#1d1836",
   },
   {
-    testimonial:
-      "Andrei delivered our vacation rental website with great attention to detail and professionalism. The result exceeded our expectations — clean design, fast loading, and easy to manage.",
+    testimonial: "Andrei hat eine ausgezeichnete Leistung erbracht. Er hat unser Ferienwohnungs-Website mit großem Augenmerk auf Details und Profissionalität entwickelt. Das Ergebnis hat unsere Erwartungen übertroffen — sauberes Design, schnelles Laden und einfach zu verwalten.",
     name: "Oliver Mehrle",
     designation: "Client",
     company: "Ferienwohnungen Gera",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
+    image: null,
+    initials: "OM",
+    color: "#151030",
   },
 ];
 

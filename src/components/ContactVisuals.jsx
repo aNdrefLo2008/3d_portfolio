@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { slideIn } from "../utils/motion";
 
 const PARTICLES = Array.from({ length: 28 }, (_, i) => ({
   id: i,
@@ -24,7 +25,7 @@ const ContactVisual = () => {
   ];
 
   return (
-    <div className="relative w-full h-full min-h-[420px] flex items-center justify-center overflow-hidden">
+    <motion.div variants={slideIn('right', "tween", 0.2, 1)} className="relative w-full h-full min-h-[420px] flex items-center justify-center overflow-hidden">
 
       {/* ── Grid background ───────────────────────────── */}
       <svg
@@ -147,7 +148,7 @@ const ContactVisual = () => {
         </motion.div>
 
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

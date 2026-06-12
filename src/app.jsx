@@ -11,6 +11,8 @@ const Works               = lazy(() => import('./components/Works'));
 const Contact             = lazy(() => import('./components/Contact'));
 const AeProject           = lazy(() => import('./components/AeProjects'));
 const DataAnalysisProject = lazy(() => import('./components/DataAnalysisProject'));
+const Services = lazy(() => import('./components/Services'));
+const Testimonials = lazy(() => import('./components/Feedbacks'));
 
 const SectionFallback = () => (
   <div className="w-full h-32 flex items-center justify-center">
@@ -26,6 +28,8 @@ const LandingPage = () => (
     <Suspense fallback={<SectionFallback />}><About /></Suspense>
     <Suspense fallback={<SectionFallback />}><Experience /></Suspense>
     <Suspense fallback={<SectionFallback />}><Works /></Suspense>
+    <Suspense fallback={<SectionFallback />}><Services /></Suspense>
+    <Suspense fallback={<SectionFallback />}><Testimonials /></Suspense>
     <div className="relative z-0">
       <Suspense fallback={<SectionFallback />}><Contact /></Suspense>
     </div>

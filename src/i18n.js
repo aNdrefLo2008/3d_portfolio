@@ -29,7 +29,7 @@ const resources = {
           gpa:            "GPA",
           projects:       "Projects",
           languages:      "Languages",
-          certifications: "Certifications",
+          websites:  "Websites Built",
         },
       },
 
@@ -60,6 +60,18 @@ const resources = {
       },
 
       projects: {
+        Electrician: {
+          name: "Electrician Webseite",
+          description:
+            "Modern website for an electrician business built with Next.js and Tailwind CSS. Provides information on services, booking system, contact options, and customer reviews in an appealing design.",
+        },
+
+        Physiotherapy: {
+          name: "Physiotherapy Webseite",
+          description:
+            "Modern website for a physiotherapy practice built with Next.js and Tailwind CSS. Provides information on services, booking system, contact options, and customer reviews in an appealing design.",
+        },
+
         /* ── New projects ── */
         MarketCapModeling: {
           name: "Market Cap Modeling",
@@ -121,12 +133,12 @@ const resources = {
       },
 
       contactVisual: {
-        role:         "Full-Stack Entwickler & ML Engineer",
-        status:       { label: "Status",    value: "Verfügbar"              },
-        location:     { label: "Standort",  value: "Deutschland · Remote"   },
-        response:     { label: "Antwort",   value: "Innerhalb von 24 Std."  },
-        languages:    { label: "Sprachen",  value: "DE · EN · IT · RO"      },
-        availability: "Offen für Praktika & Teilzeitstellen",
+        role:         "Full-Stack Developer & ML Engineer",
+        status:       { label: "Status",    value: "Available"              },
+        location:     { label: "Location",  value: "Germany · Remote"   },
+        response:     { label: "Response Time",   value: "In 24 Hours"  },
+        languages:    { label: "Languages",  value: "DE · EN · IT · RO"      },
+        availability: "Open for client projects",
       },
 
       marketcap: {
@@ -169,6 +181,40 @@ const resources = {
         applePodcast: { title: "Apple Podcast", description: "Podcast intro animation." },
         appleTV:      { title: "Apple TV",      description: "Apple TV promo animation." },
       },
+
+      services: {
+        subtitle: "Pricing",
+        title: "Packages",
+        mostPopular: "Most Popular",
+        oneTime: "one-time",
+        cta: "Get in touch",
+        payment: "50% upfront · 50% on delivery · 2-week turnaround",
+        description: "Fixed pricing, no surprises. Each project includes mobile optimization, contact form, and Google Maps integration.",
+
+        neubau: {
+          title: "New Website",
+          description: "5-page website from scratch, designed and built.",
+          "neubau.f1": "5 pages (Home, About, Services, Contact, Location)",
+          "neubau.f2": "Mobile-optimized",
+          "neubau.f3": "Contact form + Google Maps",
+          "neubau.f4": "Ready in 2 weeks",
+        },
+        neubauBuchung: {
+          title: "New Website + Booking",
+          description: "Full website plus online booking or reservation system.",
+          "neubauBuchung.f1": "Everything in New Website",
+          "neubauBuchung.f2": "Online booking / reservation form",
+          "neubauBuchung.f3": "Email notifications on booking",
+          "neubauBuchung.f4": "Ready in 2–3 weeks",
+        },
+        redesign: {
+          title: "Redesign",
+          description: "Your existing website rebuilt — modern, fast, and mobile-ready.",
+          "redesign.f1": "Complete visual overhaul",
+          "redesign.f2": "Mobile-optimized",
+          "redesign.f3": "Ready in 2 weeks",
+        },
+      },
     },
   },
 
@@ -202,7 +248,7 @@ const resources = {
           gpa:            "Notenschnitt",
           projects:       "Projekte",
           languages:      "Sprachen",
-          certifications: "Zertifikate",
+          websites:  "Websites gebaut",
         },
       },
 
@@ -232,7 +278,22 @@ const resources = {
           "Die folgenden Projekte zeigen meine Fähigkeiten anhand realer Beispiele. Sie spiegeln meine Fähigkeit wider, skalierbare Systeme zu entwerfen, Full-Stack zu arbeiten und vom ML-Modell bis zur produktionsreifen Webplattform professionelle Ergebnisse zu liefern.",
       },
 
+      
+
       projects: {
+
+        Electrician: {
+          name: "Elektriker Webseite",
+          description:
+            "Hochmoderne Webseite für einen Elektrikerbetrieb, entwickelt mit Next.js und Tailwind CSS. Bietet Informationen zu Dienstleistungen, Buchungssystem, Kontaktmöglichkeiten und Kundenbewertungen in einem ansprechenden Design.",
+        },
+
+        Physiotherapy: {
+          name: "Physiotherapy Webseite",
+          description:
+            "Hochmoderne Webseite für eine Physiotherapiepraxis, entwickelt mit Next.js und Tailwind CSS. Bietet Informationen zu Dienstleistungen, Buchungssystem, Kontaktmöglichkeiten und Kundenbewertungen in einem ansprechenden Design.",
+        },
+
         /* ── Neue Projekte ── */
         MarketCapModeling: {
           name: "Marktkapitalisierungs-Modell",
@@ -284,7 +345,7 @@ const resources = {
         location:     { label: "Standort",  value: "Deutschland · Remote"   },
         response:     { label: "Antwort",   value: "Innerhalb von 24 Std."  },
         languages:    { label: "Sprachen",  value: "DE · EN · IT · RO"      },
-        availability: "Offen für Praktika & Teilzeitstellen",
+        availability: "Offen für Kundenaufträge",
       },
 
       contact: {
@@ -344,6 +405,40 @@ const resources = {
         applePodcast: { title: "Apple Podcast", description: "Podcast-Intro-Animation." },
         appleTV:      { title: "Apple TV",      description: "Apple TV Promo-Animation." },
       },
+
+      services: {
+        subtitle: "Preise",
+        title: "Pakete",
+        mostPopular: "Beliebteste Wahl",
+        oneTime: "einmalig",
+        cta: "Jetzt anfragen",
+        payment: "50 % Anzahlung · 50 % bei Fertigstellung · Lieferzeit ca. 2 Wochen",
+        description: "Fixpreise, keine versteckten Kosten. Jedes Projekt beinhaltet Mobiloptimierung, Kontaktformular und Google Maps.",
+
+        neubau: {
+          title: "Website Neubau",
+          description: "5-seitige professionelle Website von Grund auf neu.",
+          "neubau.f1": "5 Seiten (Start, Über uns, Leistungen, Kontakt, Anfahrt)",
+          "neubau.f2": "Mobil-optimiert",
+          "neubau.f3": "Kontaktformular + Google Maps",
+          "neubau.f4": "Fertig in 2 Wochen",
+        },
+        neubauBuchung: {
+          title: "Neubau + Buchung",
+          description: "Komplette Website mit Online-Buchungs- oder Reservierungssystem.",
+          "neubauBuchung.f1": "Alles aus Website Neubau",
+          "neubauBuchung.f2": "Online-Buchungs- / Reservierungsformular",
+          "neubauBuchung.f3": "E-Mail-Benachrichtigung bei Buchung",
+          "neubauBuchung.f4": "Fertig in 2–3 Wochen",
+        },
+        redesign: {
+          title: "Redesign",
+          description: "Bestehende Website komplett neu — modern, schnell, mobil.",
+          "redesign.f1": "Komplette visuelle Überarbeitung",
+          "redesign.f2": "Mobil-optimiert",
+          "redesign.f3": "Fertig in 2 Wochen",
+        },
+      },
     },
   },
 };
@@ -352,8 +447,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng:           'en',
-    fallbackLng:   'en',
+    lng:           'de',
+    fallbackLng:   'de',
     interpolation: { escapeValue: false },
   });
 

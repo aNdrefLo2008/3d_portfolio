@@ -46,7 +46,11 @@ export { default as imgMarketCap }       from "./projects/market-cap.png";
 export { default as imgJobDashboard }    from "./projects/job-dashboard.png";
 export { default as imgFerienwohnungen } from "./projects/ferienwohnung-gera.png";
 export { default as imgAfgMedia }        from "./projects/AFG.png";
-export { default as imgPortfolio }       from "./projects/ecommerce.png";
+export { default as imgRestaurant }       from "./projects/rlp.png";
+export { default as imgElektriker }       from "./projects/elp.png";
+export { default as imgPhysotherapy }       from "./projects/plp.png";
+
+
 
 // ── Company Logos ───────────────────────────────────────
 export { default as fraunhofer } from "./company/fraunhofer.png";

@@ -77,7 +77,7 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li>
+          <li className="hidden xl:block">
             <Link
               to="/aeprojects"
               className={`${location.pathname === '/aeprojects' ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
@@ -86,7 +86,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li>
+          <li className="hidden xl:block">
             <Link
               to="/dataanalysisproject"
               className={`${location.pathname === '/dataanalysisproject' ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}

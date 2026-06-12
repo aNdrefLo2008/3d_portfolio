@@ -181,7 +181,7 @@ const Hero = () => {
             { value: "1.0", label: t('hero.stats.gpa')            },
             { value: "5+",  label: t('hero.stats.projects')       },
             { value: "4",   label: t('hero.stats.languages')      },
-            { value: "3",   label: t('hero.stats.certifications') },
+            { value: "5+", label: t('hero.stats.websites') },
           ].map(({ value, label }) => (
             <div key={label} className="flex flex-col">
               <span className="text-white font-black text-[20px] sm:text-[28px] leading-none">{value}</span>

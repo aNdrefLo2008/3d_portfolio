@@ -12,6 +12,7 @@ const FeedbackCard = ({
   name,
   designation,
   company,
+  initials,
   image,
 }) => (
   <motion.div
@@ -29,15 +30,20 @@ const FeedbackCard = ({
             <span className='blue-text-gradient'>@</span> {name}
           </p>
           <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
+            {designation} von {company}
           </p>
         </div>
 
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
+        {image ? (
+          <img src={image} alt={name} className='w-10 h-10 rounded-full object-cover' />
+        ) : (
+          <div
+            className='w-10 h-10 rounded-full flex items-center justify-center text-white text-[14px] font-bold flex-shrink-0'
+            style={{ background: 'linear-gradient(135deg, #804dee, #3b3baa)' }}
+          >
+            {initials}
+          </div>
+        )}
       </div>
     </div>
   </motion.div>
@@ -50,8 +56,8 @@ const Feedbacks = () => {
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <p className={styles.sectionSubText}>Was andere sagen</p>
+          <h2 className={styles.sectionHeadText}>Empfehlungen.</h2>
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
