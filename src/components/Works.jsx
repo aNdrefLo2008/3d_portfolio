@@ -106,14 +106,23 @@ const Works = () => {
   return (
     <>
       {/* Überschriften-Animation auf Mobile abschwächen/überspringen */}
-      <motion.div variants={isMobile ? {} : textVariant()}>
+      <motion.div 
+        variants={""}
+        initial={"visible"}
+        whileInView={"visible"}
+        viewport={{ once: true, amount: 0.25 }}
+      >
         <p className={styles.sectionSubText}>{t("works.myWork")}</p>
         <h2 className={styles.sectionHeadText}>{t("works.projects")}</h2>
       </motion.div>
 
       <div className="w-full flex">
+        {/* Beschreibung: Auf Mobile KEINE Variante/Animation nutzen */}
         <motion.p
-          variants={isMobile ? {} : fadeIn("", "", 0.1, 1)}
+          variants={""}
+          initial={"visible"}
+          whileInView={"visible"}
+          viewport={{ once: true, amount: 0.25 }}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           {t("works.description")}
