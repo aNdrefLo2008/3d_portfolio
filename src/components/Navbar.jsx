@@ -138,7 +138,7 @@ const Navbar = () => {
               loading="lazy"
               src={toggle ? close : menu}
               alt="menu"
-              className="w-[28px] h-[28px] object-contain cursor-pointer"
+              className="w-[18px] h-[18px] object-contain cursor-pointer"
               onClick={() => setToggle(!toggle)}
             />
             <motion.div
