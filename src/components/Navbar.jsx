@@ -20,59 +20,55 @@ const Navbar = () => {
   const isActive = (href) =>
     location.pathname === href || location.hash === href;
 
+  // Shared link classes
+  const linkClass = (active) =>
+    `${active ? 'text-white' : 'text-secondary'} hover:text-white text-[14px] xl:text-[16px] font-medium transition-colors duration-200 whitespace-nowrap`;
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 backdrop-blur-xl backdrop-brightness-90 dark:backdrop-brightness-75`}
+      // ── Fix 1: sm:px-16 → px-6 md:px-10 xl:px-16
+      // sm:px-16 left only 576px on a 640px screen — too tight for DE nav items
+      className="px-6 md:px-10 xl:px-16 w-full flex items-center py-5 fixed top-0 z-20 backdrop-blur-xl backdrop-brightness-90 dark:backdrop-brightness-75"
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto relative">
 
         {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => window.scrollTo(0, 0)}
-        >
-          <img loading="lazy" src={logo1} alt="Andrei Florea Logo" className="h-16 object-contain" />
+            <Link
+              to="/"
+              className="flex items-center gap-2"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+          {/* h-10 für Mobile, sm:h-16 ab Tablets */}
+          <img loading="lazy" src={logo1} alt="Andrei Florea Logo" className="h-10 sm:h-16 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Andrei&nbsp;<span className="hidden md:inline">| Florea</span>
           </p>
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="list-none hidden sm:flex flex-row gap-8 items-center">
+        {/* ── Fix 2: gap-8 → gap-4 lg:gap-7  (was 32px, now 16px at sm) */}
+        <ul className="list-none hidden sm:flex flex-row gap-4 lg:gap-7 items-center">
 
           <li>
-            <a
-              href="/#about"
-              className={`${isActive("/#about") ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
-            >
+            <a href="/#about" className={linkClass(isActive("/#about"))}>
               {t('navbar.about')}
             </a>
           </li>
 
           <li>
-            <a
-              href="/#experience"
-              className={`${isActive("/#experience") ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
-            >
+            <a href="/#experience" className={linkClass(isActive("/#experience"))}>
               {t('navbar.experience')}
             </a>
           </li>
 
           <li>
-            <a
-              href="/#projects"
-              className={`${isActive("/#projects") ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
-            >
+            <a href="/#projects" className={linkClass(isActive("/#projects"))}>
               {t('navbar.projects')}
             </a>
           </li>
 
           <li>
-            <a
-              href="/#contact"
-              className={`${isActive("/#contact") ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
-            >
+            <a href="/#contact" className={linkClass(isActive("/#contact"))}>
               {t('navbar.contact')}
             </a>
           </li>
@@ -80,7 +76,7 @@ const Navbar = () => {
           <li className="hidden xl:block">
             <Link
               to="/aeprojects"
-              className={`${location.pathname === '/aeprojects' ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
+              className={linkClass(location.pathname === '/aeprojects')}
             >
               {t('navbar.ae')}
             </Link>
@@ -89,14 +85,14 @@ const Navbar = () => {
           <li className="hidden xl:block">
             <Link
               to="/dataanalysisproject"
-              className={`${location.pathname === '/dataanalysisproject' ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium transition-colors duration-200`}
+              className={linkClass(location.pathname === '/dataanalysisproject')}
             >
               {t('navbar.dataanalysis')}
             </Link>
           </li>
 
-          {/* LinkedIn Icon */}
-          <li className='hidden xl:flex'>
+          {/* LinkedIn */}
+          <li className="hidden xl:flex">
             <a
               href={LINKEDIN}
               target="_blank"
@@ -110,8 +106,8 @@ const Navbar = () => {
             </a>
           </li>
 
-          {/* GitHub Icon */}
-          <li className='hidden xl:flex'>
+          {/* GitHub */}
+          <li className="hidden xl:flex">
             <a
               href={GITHUB}
               target="_blank"
@@ -127,8 +123,8 @@ const Navbar = () => {
 
         </ul>
 
-        {/* Right side: Language toggle + Mobile menu */}
-        <div className="flex items-center gap-3">
+        {/* Right side: Language toggle + Mobile hamburger */}
+        <div className="flex items-center gap-3 flex-shrink-0">
           <button
             className="text-white border border-white/40 px-3 py-1 rounded-md text-sm hover:border-white transition-colors duration-200"
             onClick={changeLanguage}
@@ -149,7 +145,7 @@ const Navbar = () => {
               initial={{ y: 25, opacity: 0 }}
               animate={toggle ? { y: 0, opacity: 1 } : { y: 25, opacity: 0 }}
               transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className={`${!toggle ? 'hidden' : 'flex'} p-6 backdrop-blur-2xl bg-black/95 border border-gray-700 absolute top-20 right-0 mx-4 my-2 min-w-[180px] z-10 rounded-xl`}
+              className={`${!toggle ? 'hidden' : 'flex'} p-6 backdrop-blur-2xl bg-black/95 border border-gray-700 absolute top-16 sm:top-20 right-0 min-w-[180px] z-10 rounded-xl`}
             >
               <ul className="list-none flex flex-col gap-4 w-full">
 

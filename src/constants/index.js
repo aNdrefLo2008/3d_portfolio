@@ -34,6 +34,7 @@ import {
   imgElektriker,
   imgPhysotherapy,
   school,
+  novalutions
 } from "../assets";
 
 export const navLinks = [
@@ -44,11 +45,13 @@ export const navLinks = [
 ];
 
 /* ── Services / Skill Cards ─────────────────────────────── */
+import { MdLanguage, MdCode, MdPsychology, MdBrush } from 'react-icons/md';
+
 const services = [
-  { title: "Website für lokale Betriebe", icon: web     },   // ← NEU, zuerst
-  { title: "Full-Stack Development",      icon: backend },
-  { title: "Machine Learning",            icon: creator },
-  { title: "UI / UX Design",              icon: mobile  },
+  { id: 'web',   Icon: MdLanguage   },
+  { id: 'stack', Icon: MdCode       },
+  { id: 'ml',    Icon: MdPsychology },
+  { id: 'ux',    Icon: MdBrush      },
 ];
 
 /* ── Tech Stack ─────────────────────────────────────────── */
@@ -95,6 +98,18 @@ const experiences = [
       "Leistungskurse: Mathematik & Biologie – vertieftes Arbeiten auf erhöhtem Anforderungsniveau.",
       "Aktueller Notenschnitt: 1,0 – Englisch (15 Punkte), Geschichte (15 Punkte), Philosophie (15 Punkte).",
       "Intensives Selbststudium in Informatik: Webentwicklung, Backend-Architekturen und Machine Learning.",
+    ],
+  },
+  {
+    title:        "Teilzeitjob – Softwareentwickler",
+    company_name: "Novalutions UG",
+    icon:         novalutions,
+    iconBg:       "#ffffff",
+    date:         "2026 - heute",
+    points: [
+      "Low-Code-Entwicklung mit Plattformen wie n8n und Microsoft Power Automate zur Automatisierung von Geschäftsprozessen.",
+      "Entwicklung von Webanwendungen mit Wordpress für Kundenprojekte, einschließlich Frontend-Design und Backend-Integration.",
+      "Unterstützung bei komplexen IT-Projekten durch die Bereitstellung von Softwarelösungen, die auf die Bedürfnisse der Kunden zugeschnitten sind.",
     ],
   },
 ];

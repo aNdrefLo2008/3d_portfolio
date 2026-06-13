@@ -36,7 +36,25 @@ const resources = {
       about: {
         introduction: "Introduction",
         overview:     "Overview",
-        description:  "I'm an 18-year-old software developer with a strong focus on modern web engineering and data-driven systems. Alongside school — where I currently maintain a 1.0 GPA — I build complex full-stack applications, machine learning models, and cloud-ready backends. I gained hands-on professional experience at the Fraunhofer Institute (INT) developing interactive data visualizations in JavaScript and D3.js. Fluent in German, English, Italian, and Romanian, I thrive in collaborative environments and love turning complex problems into clean, performant solutions.",
+        description:  "I'm an 18-year-old software developer with a strong focus on modern web engineering and data-driven systems. Alongside school — where I currently maintain a 1.0 GPA — I build websites with booking systems, complex full-stack applications, machine learning models, and cloud-ready backends. I gained hands-on professional experience with the Novalutions Team developing complex applications for designated clients. at the Fraunhofer Institute (INT) developing interactive data visualizations in JavaScript and D3.js. Fluent in German, English, Italian, and Romanian, I thrive in collaborative environments and love turning complex problems into clean, performant solutions.",
+        cards: {
+          web: {
+            title: "Websites for Local Businesses",
+            desc:  "Professional sites for restaurants, practices, and tradespeople. Mobile-ready, fast, and built to win clients.",
+          },
+          stack: {
+            title: "Full-Stack Development",
+            desc:  "End-to-end apps with Go backends, React frontends, and PostgreSQL — from architecture to deployment.",
+          },
+          ml: {
+            title: "Machine Learning",
+            desc:  "Data-driven models and interactive dashboards that turn complex datasets into clear insights.",
+          },
+          ux: {
+            title: "UI / UX Design",
+            desc:  "Clean, modern interfaces that work intuitively on every screen size.",
+          },
+        },
       },
 
       experience: {
@@ -255,7 +273,25 @@ const resources = {
       about: {
         introduction: "Einführung",
         overview:     "Überblick",
-        description:  "Ich bin 18 Jahre alt und entwickle komplexe Full-Stack-Anwendungen, Machine-Learning-Modelle und cloud-fähige Backend-Systeme – neben der Schule, die ich mit einem Notenschnitt von 1,0 absolviere. Praktische Berufserfahrung sammelte ich beim Fraunhofer Institut (INT), wo ich interaktive Datenvisualisierungen in JavaScript und D3.js entwickelte. Ich spreche fließend Deutsch, Englisch, Italienisch und Rumänisch und arbeite gerne in teamorientierten Umgebungen, in denen ich technische Probleme in saubere, performante Lösungen verwandeln kann.",
+        description:  "Ich bin 18 Jahre alt und entwickle Webseiten mit integriertem Buchungssystem für lokale Betriebe, komplexe Full-Stack-Anwendungen, Machine-Learning-Modelle und cloud-fähige Backend-Systeme – neben der Schule, die ich mit einem Notenschnitt von 1,0 absolviere. Praktische Berufserfahrung sammelte ich beim Fraunhofer Institut (INT), wo ich interaktive Datenvisualisierungen in JavaScript und D3.js entwickelte und beim Novalutions Team wo ich komplexe Anwendungen für bestimmte Kunden entwickelte. Ich spreche fließend Deutsch, Englisch, Italienisch und Rumänisch und arbeite gerne in teamorientierten Umgebungen, in denen ich technische Probleme in saubere, performante Lösungen verwandeln kann.",
+        cards: {
+          web: {
+            title: "Website für lokale Betriebe",
+            desc:  "Professionelle Websites für Restaurants, Praxen und Handwerker. Mobil optimiert, schnell und darauf ausgelegt, neue Kunden zu gewinnen.",
+          },
+          stack: {
+            title: "Full-Stack Development",
+            desc:  "Vollständige Web-Apps mit Go-Backend, React-Frontend und PostgreSQL — von der Architektur bis zum Deploy.",
+          },
+          ml: {
+            title: "Machine Learning",
+            desc:  "Datengetriebene Modelle und interaktive Dashboards, die komplexe Datensätze in klare Erkenntnisse verwandeln.",
+          },
+          ux: {
+            title: "UI / UX Design",
+            desc:  "Klare, moderne Oberflächen, die auf jedem Gerät intuitiv und schnell funktionieren.",
+          },
+        },
       },
 
       experience: {

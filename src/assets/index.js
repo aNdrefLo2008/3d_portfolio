@@ -55,6 +55,8 @@ export { default as imgPhysotherapy }       from "./projects/plp.png";
 // ── Company Logos ───────────────────────────────────────
 export { default as fraunhofer } from "./company/fraunhofer.png";
 export { default as school }     from "./company/gesamtschule-eifel.jpg";
+export { default as novalutions } from "./company/novalutions.png";
+
 
 // ── Named Exports ───────────────────────────────────────
 export {
