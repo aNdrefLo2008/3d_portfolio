@@ -11,7 +11,11 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
-  font-display: swap
+  font-display: swap;
+}
+
+body {
+  overflow-x: clip;
 }
 
 .button-shadow:hover {

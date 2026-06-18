@@ -12,6 +12,7 @@ const resources = {
         contact:      "Contact",
         ae:           "After Effects",
         dataanalysis: "Data Analysis",
+        Empfehlungen: "Testimonials",
       },
 
       hero: {
@@ -247,6 +248,7 @@ const resources = {
         experience:   "Erfahrung",
         projects:         "Projekte",
         contact:      "Kontakt",
+        Empfehlungen: "Empfehlungen",
         ae:           "After Effects",
         dataanalysis: "Datenanalyse",
       },

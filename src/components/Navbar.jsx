@@ -68,12 +68,18 @@ const Navbar = () => {
           </li>
 
           <li>
+            <a href="/#empfehlungen" className={linkClass(isActive("/#empfehlungen"))}>
+              {t('navbar.Empfehlungen')}
+            </a>
+          </li>
+
+          <li>
             <a href="/#contact" className={linkClass(isActive("/#contact"))}>
               {t('navbar.contact')}
             </a>
           </li>
 
-          <li className="hidden max-2xl:block">
+          <li className="hidden">
             <Link
               to="/aeprojects"
               className={linkClass(location.pathname === '/aeprojects')}
@@ -82,7 +88,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className="hidden max-2xl:block">
+          <li className="hidden">
             <Link
               to="/dataanalysisproject"
               className={linkClass(location.pathname === '/dataanalysisproject')}
