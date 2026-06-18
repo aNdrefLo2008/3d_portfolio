@@ -73,7 +73,7 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li className="hidden xl:block">
+          <li className="hidden max-2xl:block">
             <Link
               to="/aeprojects"
               className={linkClass(location.pathname === '/aeprojects')}
@@ -82,7 +82,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className="hidden xl:block">
+          <li className="hidden max-2xl:block">
             <Link
               to="/dataanalysisproject"
               className={linkClass(location.pathname === '/dataanalysisproject')}
@@ -165,11 +165,11 @@ const Navbar = () => {
                   <a href="/#contact">{t('navbar.contact')}</a>
                 </li>
 
-                <li className="text-white font-medium cursor-pointer" onClick={() => setToggle(false)}>
+                <li className="block text-white font-medium cursor-pointer" onClick={() => setToggle(false)}>
                   <Link to="/aeprojects">{t('navbar.ae')}</Link>
                 </li>
 
-                <li className="text-white font-medium cursor-pointer" onClick={() => setToggle(false)}>
+                <li className="block text-white font-medium cursor-pointer" onClick={() => setToggle(false)}>
                   <Link to="/dataanalysisproject">{t('navbar.dataanalysis')}</Link>
                 </li>
 
