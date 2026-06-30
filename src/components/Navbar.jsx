@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -11,6 +11,7 @@ const GITHUB   = "https://github.com/aNdrefLo2008";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [toggle, setToggle] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
   const location = useLocation();
 
   const currentLanguage = i18n.language;
@@ -24,10 +25,39 @@ const Navbar = () => {
   const linkClass = (active) =>
     `${active ? 'text-white' : 'text-secondary'} hover:text-white text-[14px] xl:text-[16px] font-medium transition-colors duration-200 whitespace-nowrap`;
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (Math.abs(currentScrollY - lastScrollY) < 10) return;
+
+      if (currentScrollY < 50) {
+        setShowNavbar(true);
+      } else if (currentScrollY > lastScrollY) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav
-      // ── Fix 1: sm:px-16 → px-6 md:px-10 xl:px-16
-      // sm:px-16 left only 576px on a 640px screen — too tight for DE nav items
+    <motion.nav
+      initial={{ y: 0 }}
+      animate={{
+        y: showNavbar ? 0 : -120,
+      }}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1], // premium easing
+      }}
       className="px-6 md:px-10 xl:px-16 w-full flex items-center py-5 fixed top-0 z-20 backdrop-blur-xl backdrop-brightness-90 dark:backdrop-brightness-75"
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto relative">
@@ -194,7 +224,7 @@ const Navbar = () => {
         </div>
 
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
